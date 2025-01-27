@@ -1,0 +1,99 @@
+{
+  "Practitioner": {
+    "resourceType": "Practitioner",
+    "identifier": [{ "value": "00120356206" }],
+    "active": true,
+    "name": [{ "text": "Lasse Lääkäri" }],
+    "telecom": [{ "system": "phone", "value": "0401231234" }],
+    "gender": "male",
+    "birthDate": "2013-01-07"
+  },
+  "Organization": {
+    "resourceType": "Organization",
+    "active": true,
+    "type": [],
+    "name": "Kansaisvälinen avaruusasema",
+    "alias": ["ISS"]
+  },
+  "Patient": {
+    "resourceType": "Patient",
+    "identifier": { "value": "010107A903C" },
+    "active": true,
+    "name": [
+      {
+        "use": "official",
+        "family": "Kuu",
+        "given": ["Kimmo", "Petteri"]
+      },
+      {
+        "use": "usual",
+        "given": ["Kimmo"]
+      }
+    ],
+    "gender": "male",
+    "birthDate": "2007-01-01",
+    "contact": [
+      {
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0401231234"
+          },
+          {
+            "system": "email",
+            "value": "Kimmo.Kuu@gmail.com"
+          }
+        ],
+        "organization": {
+          "reference": "Organization/c8909a6f-6556-4557-8dba-496ee75de51c"
+        }
+      }
+    ]
+  },
+  "Encounter": {
+    "resourceType": "Encounter",
+    "status": "in-progress",
+    "identifier": [{ "value": "12345" }],
+    "subject": {
+      "reference": "Patient/6d0dea38-e32f-49f2-8382-a70a85774419"
+    },
+    "class": {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "IMP",
+      "display": "inpatient encounter"
+    },
+    "participant": [
+      {
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                "code": "ATND",
+                "display": "attender"
+              }
+            ]
+          }
+        ],
+        "individual": {
+          "reference": "Practitioner/ba6f86ab-871f-495d-b402-49ec04980c04"
+        }
+      }
+    ],
+    "period": {
+      "start": "2024-06-10T10:00:00Z",
+      "end": "2024-06-10T11:00:00Z"
+    },
+    "reasonCode": [
+      {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "185345009",
+            "display": "ISS:ltä paluutarkastus"
+          }
+        ]
+      }
+    ]
+  }
+}

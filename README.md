@@ -5,6 +5,10 @@ To use the application, it needs to be connected to an azure function that handl
 To establish the connection, deploy function app from this repository:</p>
 <p id="description">This application could be hosted on Azure static web app and the link need to be added to terraforms CORS.</p>
 <p>After deploying, add FHIRPostResources functions function string to this applications app.jsx <azure-function-endpoint> in handleSubmit.</p>
+
+  <h2>Demo video</h2>
+  <p>https://www.youtube.com/watch?v=nfAiI-CVCag&ab_channel=Kiisshen</p>
+  
   <h2>Features</h2>
   <ul>
     <li>Select from a list of default JSON payloads.</li>
